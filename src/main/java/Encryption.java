@@ -9,7 +9,7 @@ public class Encryption {
     public String[] plainArr = plainText.split("");
     private int key;
     public List<String> encrypted = new ArrayList<String>();
-    public List<String> encryptedText(String plainText, int key){
+    public List<String> encryptedText(String plainText){
         for (int i=0; i<alpha.length(); i++){
             for(int j=0; j<plainText.length(); j++){
                 if (plainArr[j].equals(alpha.charAt(i))){

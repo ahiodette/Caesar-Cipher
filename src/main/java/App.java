@@ -8,6 +8,7 @@ public class App {
         System.out.println("Enter a word to be encrypted: ");
         String word = bufferedReader.readLine();
         Encryption encrypt = new Encryption();
+        System.out.println("The encrypted message is: "+encrypt.encryptedText(word));
 
     }
 }
