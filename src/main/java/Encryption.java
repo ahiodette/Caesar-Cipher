@@ -2,22 +2,19 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Encryption {
-    public String alpha="abcdefghijklmnopqrstuvwxyz";
-    public String encryAlpha = "xyzabcdefghijklmnopqrstuvw";
-    public String[] encryAlphab = encryAlpha.split("");
-    public String plainText;
-    public String[] plainArr = plainText.split("");
-    private int key;
-    public List<String> encrypted = new ArrayList<String>();
-    public List<String> encryptedText(String plainText){
-        for (int i=0; i<alpha.length(); i++){
-            for(int j=0; j<plainText.length(); j++){
-                if (plainArr[j].equals(alpha.charAt(i))){
-                  encrypted.add(encryAlphab[i]);
-                }
+
+    public String encryptedText(String plainText, int key  ){
+
+        String cipherText= " ";
+        String alphabet = "abcdefghijklmnopqrstuvwxyz";
+        int k= 0;
+        for(int i=0; i<plainText.length(); i++){
+            int charPosition = alphabet.indexOf(plainText.charAt(i));
+            int keyVal = (key + charPosition) % 26;
+            char replaceVal = alphabet.charAt(keyVal);
+            cipherText += replaceVal;
         }
-        }
-        return encrypted;
+        return  cipherText;
 
     }
 }
