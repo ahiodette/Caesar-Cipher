@@ -12,12 +12,17 @@ public class App {
         String choose = bufferedReader.readLine();
         if (choose.equals("1")) {
             System.out.println("Enter a word to be encrypted: ");
-            String word = bufferedReader.readLine();
-            Encryption encrypt = new Encryption();
+            String text = bufferedReader.readLine();
+            String word = text.toLowerCase();
+
             System.out.println("Enter the Shift key: ");
             String stringKey = bufferedReader.readLine();
             int intKey = Integer.parseInt(stringKey);
+            Encryption encrypt = new Encryption();
+            Decryption decr = new Decryption();
             System.out.println("The encrypted message is: " + encrypt.encryptedText(word, intKey));
+//            System.out.println("The original message is: " + decr.decryptedText(word, intKey));
+            System.out.println("The original message was: "+word);
             System.out.println("Thank you!");
         } else if (choose.equals("2")) {
             System.out.println("Enter a word to be decrypted: ");
