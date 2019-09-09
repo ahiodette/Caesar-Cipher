@@ -14,7 +14,6 @@ public class App {
             System.out.println("Enter a word to be encrypted: ");
             String text = bufferedReader.readLine();
             String word = text.toLowerCase();
-
             System.out.println("Enter the Shift key: ");
             String stringKey = bufferedReader.readLine();
             int intKey = Integer.parseInt(stringKey);
@@ -24,9 +23,11 @@ public class App {
 //            System.out.println("The original message is: " + decr.decryptedText(word, intKey));
             System.out.println("The original message was: "+word);
             System.out.println("Thank you!");
-        } else if (choose.equals("2")) {
+        }
+        else if (choose.equals("2")) {
             System.out.println("Enter a word to be decrypted: ");
-            String ibanga = bufferedReader.readLine();
+            String secret = bufferedReader.readLine();
+            String ibanga = secret.toLowerCase();
             Decryption decr = new Decryption();
             System.out.println("Enter the Shift key: ");
             String stringKey = bufferedReader.readLine();
