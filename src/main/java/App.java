@@ -8,7 +8,7 @@ public class App {
 
         System.out.println("\nEncryption/Decryption of messages. Choose the action: ");
         System.out.println("=====================================================");
-        System.out.println("1. Encrypt\n2. Decrypt\n3. Exit");
+        System.out.println("1. Encrypt\n2. Decrypt\n3. Exit\n");
         String choose = bufferedReader.readLine();
         if (choose.equals("1")) {
             System.out.println("Enter a word to be encrypted: ");
